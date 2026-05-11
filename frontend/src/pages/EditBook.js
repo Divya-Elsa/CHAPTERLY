@@ -40,7 +40,6 @@ function EditBook() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // simple validation
     if (!book.title || !book.author) {
       alert("Title and Author are required");
       return;
@@ -55,7 +54,7 @@ function EditBook() {
     })
       .then(() => {
         alert("Book updated successfully ✅");
-        navigate("/");
+        navigate("/dashboard");// go back to dashboard
       })
       .catch(err => console.error("Error updating:", err));
   };
@@ -74,7 +73,7 @@ function EditBook() {
           type="text"
           name="title"
           placeholder="Title"
-          value={book.title}
+          value={book.title || ""}
           onChange={handleChange}
         />
 
@@ -82,7 +81,7 @@ function EditBook() {
           type="text"
           name="author"
           placeholder="Author"
-          value={book.author}
+          value={book.author || ""}
           onChange={handleChange}
         />
 
@@ -90,7 +89,7 @@ function EditBook() {
           type="number"
           name="totalPages"
           placeholder="Total Pages"
-          value={book.totalPages}
+          value={book.totalPages || ""}
           onChange={handleChange}
         />
 
@@ -98,7 +97,7 @@ function EditBook() {
           type="number"
           name="currentPage"
           placeholder="Current Page"
-          value={book.currentPage}
+          value={book.currentPage || ""}
           onChange={handleChange}
         />
 
