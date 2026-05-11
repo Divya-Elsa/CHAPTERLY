@@ -21,7 +21,9 @@ function Dashboard() {
           <p>{book.author}</p>
           <p>{book.currentPage} / {book.totalPages}</p>
 
-          <button>Edit</button>
+          <button onClick={() => navigate(`/edit/${book.id}`)}>
+            Edit
+          </button>
         </div>
       ))}
 

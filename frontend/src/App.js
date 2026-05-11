@@ -10,6 +10,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/add" element={<AddBook />} />
+        <Route path="/edit/:id" element={<EditBook />} />
       </Routes>
     </BrowserRouter>
   );
