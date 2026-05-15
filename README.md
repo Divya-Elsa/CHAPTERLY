@@ -197,6 +197,7 @@ CHAPTERLY/
 ├── frontend/              # React frontend application
 │   ├── src/
 │   │   ├── pages/        # Page components (Dashboard, AddBook, EditBook, Landing)
+│   │   ├── assets/       # Static assets (fonts, images, etc.)
 │   │   ├── App.js        # Main application component
 │   │   └── index.js      # React entry point
 │   ├── public/           # Static assets
